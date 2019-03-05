@@ -45,7 +45,7 @@ while i <= 15:
 # Create a while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 
 i = 0
-while i >= 0 and i <=100:
+while and i <=100:
     print(i)
     i+=2
 
@@ -70,6 +70,11 @@ while i >= 5:
     print(i)
     i-=5
 
+#another way^
+
+for n in range(100,0,-5):
+    print(n)
+
 # -------FOR LOOPS---------
 
 # Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
@@ -77,6 +82,13 @@ while i >= 5:
 enter_number = input('Please enter a number: ')
 for i in range(1,11):
     print(int(enter_number),'x',i,'=',enter_number*i)
+
+# Another way^ 
+
+x = int(input('Please enter a number: '))
+for n in range(1,11):
+    output = '{} X {} = {}'.format(x, n, x * n)
+    print(output)
 
 # Create a for loop that uses print to create the output shown below.
 # 1
@@ -95,10 +107,19 @@ for i in range(10):
 # Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue 
 # prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). 
 # Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+# Step 1: get a valid number from user
+# while we have somethinf that is not valid
+# Keep prompting the user for input
+# Step 2: do logic with the number we acquired
+# For every number between 1 and 50
+# if the number is even, skip it
+# if the number is the one that was entered
+# print the special message
+# else, just print the number
 
 odd_number = input('Please enter an odd number between 1 and 50: ')
 while not odd_number.isdigit() or int(odd_number) > 50 or int(odd_number) < 1 or int(odd_number) % 2 == 0:
-        odd_number = input('Invalid, Please enter odd number between 1 and 50: ')
+        odd_number = input('Please enter an odd number between 1 and 50: ')
 print(f'Number to skip is:{odd_number}\n')
 for i in range(51):
     if i == int(odd_number):
@@ -107,6 +128,13 @@ for i in range(51):
     if i % 2 == 0:
         continue
     print(f'This is an odd number: {i}')
+
+# Another way ^
+While True:
+    number_to_skip = input('Enter an odd number between 1 and 50: ')
+    if number_to_skip.isdigit() and 1 <= int(number_to_skip)<= 50 and int(number_to_skip) % 2 == 1:
+        break
+# There go to Step 2 ^
 # continue goes back up to for loop on next iteration
 
 # The input function can be used to prompt for input and use that input in your python code. 
@@ -133,7 +161,7 @@ while user_input >= 1:
     print(user_input)
     user_input -= 1
 
-# 3. izzbuzz
+# 3. Fizzbuzz
 # One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
 # Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 # Write a program that prints the numbers from 1 to 100.
@@ -175,9 +203,10 @@ while True:
 user_input = int(user_input)
 print('number | squared | cubed' )
 print('------ | ------- | -----')
-for i in range(1,user_input + 1):
+for i in range(1, user_input + 1):
     print(f'{i}      |{i*i}       |     {i*i*i}')
-
+    # OR print('{:<6} | {:<7} | {:<5}'.format(n, n**2, n ** 3))
+     # :<6 does left align
 
 # 5. Convert given number grades into letter grades.
 # Prompt the user for a numerical grade from 0 to 100.
@@ -198,7 +227,7 @@ while True:
     if user_input.isdigit() and int(user_input) > 0 and int(user_input) <= 100:
         user_input = int(user_input)
         if user_input >= 0 and user_input <= 59:
-            print('You flunked')
+            print('You got an F')
         elif user_input >= 60 and user_input <= 66:
             Print ('You got a D')
         elif user_input >= 67 and user_input <= 79:
@@ -210,6 +239,22 @@ while True:
         print()
     elif user_input.lower() == 'exit':
         break
+
+# Another way ^ 
+user_wants_to_continue = 'Yes'
+While user_wants_to_continue == 'Yes':
+    grade = int(input('Enter a number grade: '))
+    if grade >= 88:
+        Print("A")
+    elif grade >= 80:
+        print('B')
+    elif grade >= 67:
+        print('C')
+    elif grade >= 60:
+        Print('D')
+    elif grade >= 0:
+        print('F')
+user_wants_to_continue = input('Do you want to continue? ')
 
 # 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
 # Each dictionary in the list should have the keys title, author, and genre. 
@@ -227,3 +272,7 @@ genre = input('Please enter a genre: ')
 for book in Books:
     if book['genre'].lower() == genre.lower():
         print(book['title'])
+
+# of genre not in book['genre']:
+    # continue
+# ^ "in" works for a list

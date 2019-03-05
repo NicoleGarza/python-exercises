@@ -123,7 +123,7 @@ i = 5
 #     print(user_input)
 #     user_input -= 1
 
-# Fizzbuzz
+# # 3. izzbuzz
 # One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
 # Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 # Write a program that prints the numbers from 1 to 100.
@@ -141,7 +141,7 @@ i = 5
 #     else:
 #         print(i)
 
-# Display a table of powers.
+# #4 Display a table of powers.
 # Prompt the user to enter an integer.
 # Display a table of squares and cubes from 1 to the value entered.
 # Ask if the user wants to continue.
@@ -168,4 +168,54 @@ i = 5
 # print('------ | ------- | -----')
 # for i in range(1,user_input + 1):
 #     print(f'{i}      |{i*i}       |     {i*i*i}')
-    
+
+
+# 5. Convert given number grades into letter grades.
+# Prompt the user for a numerical grade from 0 to 100.
+# Display the corresponding letter grade.
+# Prompt the user to continue.
+# Assume that the user will enter valid integers for the grades.
+# The application should only continue if the user agrees to.
+# Grade Ranges:
+# A : 100 - 88
+# B : 87 - 80
+# C : 79 - 67
+# D : 66 - 60
+# F : 59 - 0
+
+# while True:
+#     print('Type exit to exit')
+#     user_input = input('Please enter numerical grade from 0 to 100: ')
+#     if user_input.isdigit() and int(user_input) > 0 and int(user_input) <= 100:
+#         user_input = int(user_input)
+#         if user_input >= 0 and user_input <= 59:
+#             print('You flunked')
+#         elif user_input >= 60 and user_input <= 66:
+#             Print ('You got a D')
+#         elif user_input >= 67 and user_input <= 79:
+#             print('You got a C')
+#         elif user_input >= 80 and user_input <= 87:
+#             print('You got a B')
+#         elif user_input >= 88 and user_input <= 100:
+#             print('You got an A')
+#         print()
+#     elif user_input.lower() == 'exit':
+#         break
+
+# # 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
+# Each dictionary in the list should have the keys title, author, and genre. 
+# Loop through the list and print out information about each book.
+# Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+
+# Books =   [{'title': 'What Happened', 'author': 'Hillary Clinton', 'genre': 'Biography'},
+#            {'title': '1984', 'author': 'George Orwell', 'genre': 'Dystopian Fiction'},
+#            {'title': 'Brave New World', 'author': 'Aldous Huxley', 'genre': 'Dystopian Fiction'},
+#            {'title': 'The Winter of Discontent', 'author': 'John Steinbeck', 'genre': 'Historical Fiction'},
+#            {'title': 'How To Win Friends and influence People', 'author': 'Dale Carnegie', 'genre': 'Non-ficiton'}]
+
+# genre = input('Please enter a genre: ')
+# for book in Books:
+#     if book['genre'].lower() == genre.lower():
+#         print(book['title'])
+
+        

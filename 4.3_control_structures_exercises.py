@@ -1,5 +1,6 @@
 # 1. CONDITIONAL BASICS
-#prompt the user for a day of the week, print out whether the day is Monday or not
+# prompt the user for a day of the week, print out whether the day is Monday or not
+
 weekday = input('What day of the week is it?: ')
 print(f'weekday = {weekday}')
 if weekday == 'Monday':
@@ -8,21 +9,23 @@ else:
     print('it is not Monday!')
 
 # prompt the user for a day of the week, print out whether the day is a weekday or a weekend
+
 weekday = input('Please enter day of the week: ')
 if weekday == 'Saturay' or weekday == 'Sunday':
     print('It is a weekend!')
 else:
     print('It is a weekday')
 
-# # #  create variables for:
-# # # - the number of hour worked in one week
+# create variables for:
+# the number of hour worked in one week
 hours_worked = 43
-# # # # - the hourly rate
+# the hourly rate
 hourly_rate = 900
-# # # # - how much the week's paycheck will be
+# how much the week's paycheck will be
 
-# # # # write the python code that calculates the weekly paycheck. You get paid time
-# # # # and a half if you work more than 40 hours
+# write the python code that calculates the weekly paycheck. You get paid time
+# and a half if you work more than 40 hours
+
 if hours_worked > 40:
     paycheck = 40 * hourly_rate + (hours_worked - 40)* hourly_rate * 1.5
 else:
@@ -30,28 +33,32 @@ else:
 
 print(paycheck)
 
-# # 2. LOOP BASICS
-#Create a while loop that runs so long as i is less than or equal to 15. Each loop iteration, output the current 
+# 2. LOOP BASICS
+# Create a while loop that runs so long as i is less than or equal to 15. Each loop iteration, output the current 
 # value of i, then increment i by one.
+
 i = 5
 while i <= 15:
     print(i)
     i+=1
 
 # Create a while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+
 i = 0
 while i >= 0 and i <=100:
     print(i)
     i+=2
 
 # Alter your loop to count backwards by 5's from 100 to -10.
+
 i = 100
-while i >= -10):
+while i >= -10:
     print(i)
     i-=5
 
 # Create a while loop that starts at 2, and displays the number squared on each line while the number is 
 # less than 1,000,000. Output should equal:
+
 i = 2
 while i < 1000000:
     print(i)
@@ -66,6 +73,7 @@ while i >= 5:
 # -------FOR LOOPS---------
 
 # Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
+
 enter_number = input('Please enter a number: ')
 for i in range(1,11):
     print(int(enter_number),'x',i,'=',enter_number*i)
@@ -80,12 +88,14 @@ for i in range(1,11):
 # 7777777
 # 88888888
 # 999999999
+
 for i in range(10):
     print(str(i)*i)
 
 # Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue 
 # prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). 
 # Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+
 odd_number = input('Please enter an odd number between 1 and 50: ')
 while not odd_number.isdigit() or int(odd_number) > 50 or int(odd_number) < 1 or int(odd_number) % 2 == 0:
         odd_number = input('Invalid, Please enter odd number between 1 and 50: ')
@@ -97,7 +107,6 @@ for i in range(51):
     if i % 2 == 0:
         continue
     print(f'This is an odd number: {i}')
-
 # continue goes back up to for loop on next iteration
 
 # The input function can be used to prompt for input and use that input in your python code. 
@@ -124,7 +133,7 @@ while user_input >= 1:
     print(user_input)
     user_input -= 1
 
-# # 3. izzbuzz
+# 3. izzbuzz
 # One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
 # Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 # Write a program that prints the numbers from 1 to 100.
@@ -142,7 +151,7 @@ for i in range(1,101):
     else:
         print(i)
 
-# #4 Display a table of powers.
+# 4 Display a table of powers.
 # Prompt the user to enter an integer.
 # Display a table of squares and cubes from 1 to the value entered.
 # Ask if the user wants to continue.
@@ -158,7 +167,6 @@ for i in range(1,101):
 # 3      | 9       | 27
 # 4      | 16      | 64
 # 5      | 25      | 125
-
 
 while True:
     user_input = input('please enter an integer: ')
@@ -203,7 +211,7 @@ while True:
     elif user_input.lower() == 'exit':
         break
 
-# # 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
+# 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
 # Each dictionary in the list should have the keys title, author, and genre. 
 # Loop through the list and print out information about each book.
 # Prompt the user to enter a genre, then loop through your books list and print out the titles of all the 
@@ -219,4 +227,3 @@ genre = input('Please enter a genre: ')
 for book in Books:
     if book['genre'].lower() == genre.lower():
         print(book['title'])
-        

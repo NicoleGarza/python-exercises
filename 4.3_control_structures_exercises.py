@@ -159,13 +159,13 @@ i = 5
 # 5      | 25      | 125
 
 
-while True:
-    user_input = input('please enter an integer: ')
-    if user_input.isdigit() and int(user_input) > 0:
-        break
-user_input = int(user_input)
-print('number | squared | cubed' )
-print('------ | ------- | -----')
-for i in range(1,user_input + 1):
-    print(f'{i}      |{i*i}       |     {i*i*i}')
+# while True:
+#     user_input = input('please enter an integer: ')
+#     if user_input.isdigit() and int(user_input) > 0:
+#         break
+# user_input = int(user_input)
+# print('number | squared | cubed' )
+# print('------ | ------- | -----')
+# for i in range(1,user_input + 1):
+#     print(f'{i}      |{i*i}       |     {i*i*i}')
     

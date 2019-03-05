@@ -64,17 +64,108 @@ i = 5
 # -------FOR LOOPS---------
 
 # Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
-enter_number = input('Please enter a number: ')
-for i in range(1,11):
-    print(int(enter_number),'x',i,'=',enter_number*i)
+# enter_number = input('Please enter a number: ')
+# for i in range(1,11):
+#     print(int(enter_number),'x',i,'=',enter_number*i)
 
+# Create a for loop that uses print to create the output shown below.
+# 1
+# 22
+# 333
+# 4444
+# 55555
+# 666666
+# 7777777
+# 88888888
+# 999999999
+# for i in range(10):
+#     print(str(i)*i)
 
-# The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function returns a string, so you'll need to convert this to a numeric type.)
+# Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue 
+# prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). 
+# Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+# odd_number = input('Please enter an odd number between 1 and 50: ')
 
-# user_input = input('please enter a positive number: ')
-# while not user_input.isdigit():
-#     user_input = input('Hey!!! Give me a number: ')
+# while not odd_number.isdigit() or int(odd_number) > 50 or int(odd_number) < 1 or int(odd_number) % 2 == 0:
+#         odd_number = input('Invalid, Please enter odd number between 1 and 50: ')
+# print(f'Number to skip is:{odd_number}\n')
+# for i in range(51):
+#     if i == int(odd_number):
+#         print(f'Yikes! skipping number: {odd_number}')
+#         continue
+#     if i % 2 == 0:
+#         continue
+#     print(f'This is an odd number: {i}')
+
+# continue goes back up to for loop on next iteration
+
+# The input function can be used to prompt for input and use that input in your python code. 
+# Prompt the user to enter a positive number and write a loop that counts from 0 to that number. 
+# (Hints: first make sure that the value the user entered is a valid number, 
+# also note that the input function returns a string, so you'll need to convert this to a numeric type.)
+
+# while True:
+#     user_input = input('Please enter a positive number: ')
+#     if user_input.isdigit() and int(user_input) > 0: 
+#         break
+# for i in range(int(user_input)+1):
+#     print(i)
+
+# Write a program that prompts the user for a positive integer. Next write a loop that prints out the 
+# numbers from the number the user entered down to 1.
+
+# while True:
+#     user_input = input('Please enter a positive integer: ')
+#     if user_input.isdigit() and int(user_input) > 0:
+#         break
 # user_input = int(user_input)
-# print(user_input+=1)
+# while user_input >= 1:
+#     print(user_input)
+#     user_input -= 1
+
+# Fizzbuzz
+# One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
+# Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
+# Write a program that prints the numbers from 1 to 100.
+# For multiples of three print "Fizz" instead of the number
+# For the multiples of five print "Buzz".
+# For numbers which are multiples of both three and five print "FizzBuzz".
+
+# for i in range(1,101):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print('fizzbuzz')
+#     elif i % 3 == 0:
+#         print('fizz')
+#     elif i % 5 == 0:
+#         print('buzz')
+#     else:
+#         print(i)
+
+# Display a table of powers.
+# Prompt the user to enter an integer.
+# Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue.
+# Assume that the user will enter valid data.
+# Only continue if the user agrees to.
+# Example Output
+# What number would you like to go up to? 5
+# Here is your table!
+# number | squared | cubed
+# ------ | ------- | -----
+# 1      | 1       | 1
+# 2      | 4       | 8
+# 3      | 9       | 27
+# 4      | 16      | 64
+# 5      | 25      | 125
 
 
+while True:
+    user_input = input('please enter an integer: ')
+    if user_input.isdigit() and int(user_input) > 0:
+        break
+user_input = int(user_input)
+print('number | squared | cubed' )
+print('------ | ------- | -----')
+for i in range(1,user_input + 1):
+    print(f'{i}      |{i*i}       |     {i*i*i}')
+    

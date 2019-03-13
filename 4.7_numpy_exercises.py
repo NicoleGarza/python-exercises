@@ -110,26 +110,20 @@
 # min_of_b = min(b[0]) if min(b[0]) <= min(b[1]) else min(b[1])  
 
 # numpy:
-# b0 = b[0]
-# b1 = b[1]
-# min_of_b = b0 <= b1
-# print(min_of_b)
+# b.min()
+
 
 # # Exercise 3 - refactor the following maximum calculation to find the answer with numpy.
 # max_of_b = max(b[0]) if max(b[0]) >= max(b[1]) else max(b[1])
 
 # numpy:
-# b0 = np.max(b[0])
-# b1 = np.max(b[1])
-# max_of_b = b0 >= b1
-# print(max_of_b)
+# b.max()
 
 # # Exercise 4 - refactor the following using numpy to find the mean of b
 # mean_of_b = (sum(b[0]) + sum(b[1])) / (len([b[0]]) + len(b[1]))
 
 # numpy:
-# mean_of_b = b.mean()
-# print(mean_of_b)
+# b.mean()
 
 # # Exercise 5 - refactor the following to use numpy for calculating the product of all numbers multiplied together.
 # product_of_b = 1
